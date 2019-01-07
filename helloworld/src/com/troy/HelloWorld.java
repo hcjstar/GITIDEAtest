@@ -1,9 +1,5 @@
 package com.troy;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-
 /**
  * @author hechaojun
  * @Description: 测试hello
@@ -14,11 +10,5 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         System.out.println("helloworld");
-        try {
-            InputStream inputStream = new FileInputStream("");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-        }
     }
 }
