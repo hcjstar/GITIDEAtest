@@ -95,6 +95,20 @@ public class TestLambda {
     //解决方案三 lambda表达式
     @Test
     public void test4(){
-        filterEmployee(emps,(e) -> e.getSalary() >= 5000.00);
+        List<Employee> employees = filterEmployee(emps, (e) -> e.getSalary() >= 5000.00);
+        employees.forEach(System.out::println);
+
+        System.out.println("-----------------------------------------");
+
+        List<Employee> employeeList = filterEmployee(emps, (e) -> e.getAge() <= 30);
+        employeeList.forEach(System.out::println);
+    }
+
+    //解决方案四 stream API
+    @Test
+    public void test5(){
+        emps.stream().filter(employee -> employee.getAge() <=20 ).forEach(System.out::println);
+        System.out.println("-----------------------------------------");
+        emps.stream().map(employee -> employee.getName()).limit(3).sorted().forEach(System.out::println);
     }
 }

@@ -2,7 +2,7 @@ package com.troy;
 
 /**
  * @author hechaojun
- * @Description: 1
+ * @Description: 策略模式接口
  * @ClassName: MyPredicate
  * @date 2019/1/8 10:46
  */
